@@ -1,0 +1,6 @@
+.card {
+  background-color: green;
+  width: calc((100% / 3) - 20px);
+  border-radius: var(--border-radius);
+  height: 100px;
+}

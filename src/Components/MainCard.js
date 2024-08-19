@@ -1,11 +1,12 @@
 import React from "react";
 import "../CSS/mainCard.css";
 import mainImage from "../images/image-jeremy.png";
+
 export default function MainCard() {
   return (
     <div className="main-card">
       <div className="info-card">
-        <img src={mainImage} alt="" />
+        <img src={mainImage} alt="Profile" />
         <p className="title">Report for</p>
         <p className="name">Jeremy</p>
         <p className="name">Robson</p>
