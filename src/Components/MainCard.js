@@ -5,9 +5,9 @@ export default function MainCard() {
     <div className="main-card">
       <div className="info-card">
         <img src="../images/image-jeremy.png" alt="" />
-        <p className="name">Report for</p>
+        <p className="title">Report for</p>
         <p className="name">Jeremy</p>
-        <p className="title">Robson</p>
+        <p className="name">Robson</p>
       </div>
       <div className="card-controller">
         <p className="controller daily">Daily</p>

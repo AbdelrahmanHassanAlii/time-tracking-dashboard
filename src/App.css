@@ -5,5 +5,8 @@
 @media screen and (min-width: 768px) {
   .App {
     width: 60% !important;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
   }
 }
