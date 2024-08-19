@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import { allData } from "../APIs Connection/api";
-import Card from './Card';
-
+import Card from "./Card";
+import "../CSS/cardContainer.css";
 export default function CardsContainer() {
-
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -17,10 +16,10 @@ export default function CardsContainer() {
       });
   }, []);
   return (
-    <div>
+    <div className="card-container">
       {data.map((item) => (
         <Card data={item} />
       ))}
     </div>
-  )
+  );
 }

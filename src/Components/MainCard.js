@@ -6,10 +6,14 @@ export default function MainCard() {
   return (
     <div className="main-card">
       <div className="info-card">
-        <img src={mainImage} alt="Profile" />
-        <p className="title">Report for</p>
-        <p className="name">Jeremy</p>
-        <p className="name">Robson</p>
+        <div className="profile-image">
+          <img src={mainImage} alt="Profile" />
+        </div>
+        <div className="card-contetnt">
+          <p className="title">Report for</p>
+          <p className="name">Jeremy </p>
+          <p className="name">Robson</p>
+        </div>
       </div>
       <div className="card-controller">
         <p className="controller daily">Daily</p>
