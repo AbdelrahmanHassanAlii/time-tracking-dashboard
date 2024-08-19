@@ -1,7 +1,37 @@
 .card {
-  background-color: green;
-  /* width: calc((100% / 3) -20px); */
   width: calc(100% / 3 - 20px);
   border-radius: var(--border-radius);
-  height: calc(100% / 2 - 20px);
+  position: relative;
+}
+
+.card .icon {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.card .icon img {
+  width: 70px;
+  /* position: absolute; */
+}
+
+.card .bottom-of-card {
+  padding: 10px 20px;
+  background-color: var(--dark-blue);
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+  height: 76%;
+  width: 100%;
+  position: absolute;
+  top: 25%;
+  left: 0;
+}
+
+.card .bottom-of-card .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
 }

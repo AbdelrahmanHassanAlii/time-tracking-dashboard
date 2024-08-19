@@ -17,8 +17,8 @@ export default function CardsContainer() {
   }, []);
   return (
     <div className="card-container">
-      {data.map((item) => (
-        <Card data={item} />
+      {data.map((item, index) => (
+        <Card data={item} color={"blue"} interval={"daily"}/>
       ))}
     </div>
   );
