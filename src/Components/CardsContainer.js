@@ -2,14 +2,13 @@ import React, { useEffect, useState } from "react";
 import { allData } from "../APIs Connection/api";
 import Card from "./Card";
 import "../CSS/cardContainer.css";
-export default function CardsContainer() {
+export default function CardsContainer({ interval }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     Promise.all(allData)
       .then((results) => {
         setData(results);
-        console.log("All data fetched successfully:", results);
       })
       .catch((error) => {
         console.error("An error occurred while fetching the data:", error);
@@ -18,7 +17,7 @@ export default function CardsContainer() {
   return (
     <div className="card-container">
       {data.map((item, index) => (
-        <Card data={item} color={"blue"} interval={"daily"}/>
+        <Card key={index} data={item} color={"blue"} interval={interval} />
       ))}
     </div>
   );

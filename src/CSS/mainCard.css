@@ -107,3 +107,7 @@
 .card-controller .controller:hover {
   color: var(--white);
 }
+
+.active {
+  color: var(--white) !important;
+}

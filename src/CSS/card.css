@@ -1,7 +1,12 @@
 .card {
-  width: calc(100% / 3 - 20px);
   border-radius: var(--border-radius);
   position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: calc(100% / 3 - 20px);
+  }
 }
 
 .card .icon {
@@ -11,27 +16,88 @@
 
 .card .icon img {
   width: 70px;
-  /* position: absolute; */
 }
 
 .card .bottom-of-card {
-  padding: 10px 20px;
+  padding: 30px;
   background-color: var(--dark-blue);
   border-radius: inherit;
   -webkit-border-radius: inherit;
   -moz-border-radius: inherit;
   -ms-border-radius: inherit;
   -o-border-radius: inherit;
-  height: 76%;
+  height: fit-content;
   width: 100%;
   position: absolute;
   top: 25%;
   left: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .card .bottom-of-card {
+    padding: 10px 20px;
+    height: 76%;
+  }
+}
 .card .bottom-of-card .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--white);
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .card .bottom-of-card .header {
+    margin-bottom: 0px;
+  }
+}
+
+.card .bottom-of-card .stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--pale-blue);
+}
+
+@media screen and (min-width: 768px) {
+  .card .bottom-of-card .stats {
+    margin-top: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.card .bottom-of-card .stats .current {
+  font-size: 20px;
+  color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  .card .bottom-of-card .stats .current {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+}
+
+.card .bottom-of-card .stats .previous {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+/* custom card */
+.exercise-card {
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .exercise-card {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .self-care-card {
+    margin-top: -15px;
+  }
 }
