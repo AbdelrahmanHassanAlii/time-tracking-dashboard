@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import CardsContainer from "./Components/CardsContainer";
 import MainCard from "./Components/MainCard";
+import { Link } from "react-router-dom";
 
 function App() {
   const [interval, setInterval] = useState("monthly");
@@ -12,10 +13,22 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <MainCard changeInterval={changeInterval} />
-      <CardsContainer interval={interval} />
-    </div>
+    <>
+      <div className="App">
+        <MainCard changeInterval={changeInterval} />
+        <CardsContainer interval={interval} />
+      </div>
+      <h1 class="attribution">
+        Responsive Time Tracker Dashboard - Made By{" "}
+        <Link
+          to="https://abdelrahmanhassanalii.github.io/card/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Abderahman Hassan
+        </Link>
+      </h1>
+    </>
   );
 }
 
